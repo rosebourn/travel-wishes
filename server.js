@@ -1,15 +1,20 @@
 const mongoose = require("mongoose");
 const express = require("express");
+const bodyParser = require("body-parser");
 const path = require("path");
-// const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3002;
 const app = express();
 const db = require("./config/keys").mongoURI;
 const passport = require("passport");
-require("./models/user");
+const users = require("./routes/api/users");
 
-
-const users = require("./routes/api/users.js");
+// Bodyparser middleware
+app.use(
+  bodyParser.urlencoded({
+    extended: false
+  })
+);
+app.use(bodyParser.json());
 
 mongoose
   .connect(
@@ -17,7 +22,7 @@ mongoose
     { useNewUrlParser: true }
   )
   .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log("STOP:",err));
+  .catch(err => console.log(err));
 
   // Passport middleware
   app.use(passport.initialize());
@@ -39,6 +44,8 @@ app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(PORT, function() {
-  console.log(`🌎 ==> API server now on port ${PORT}!`);
+const port = process.env.PORT || 5000;
+
+app.listen(port, function() {
+  console.log(`🌎 ==> API server now on port ${port}!`);
 });
