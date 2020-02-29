@@ -15,9 +15,12 @@ const User = require("../../models").User;
 // @desc Register user
 // @access Public
 router.post("/register", (req, res) => {
+  console.log('register route hit')
     // Form validation
   const { errors, isValid } = validateRegisterInput(req.body);
   // Check validation
+  console.log("Errors", errors)
+  console.log("ValidIS", isValid)
     if (!isValid) {
       return res.status(400).json(errors);
     }
@@ -31,7 +34,7 @@ router.post("/register", (req, res) => {
           email: req.body.email,
           password: req.body.password
         });
-        
+
   // Hash password before saving in database
         bcrypt.genSalt(10, (err, salt) => {
           bcrypt.hash(newUser.password, salt, (err, hash) => {
