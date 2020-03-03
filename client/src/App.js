@@ -9,8 +9,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 // import 'mapbox-gl/dist/mapbox-gl.css';
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
-// import Register from "./components/auth/Register";
-// import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+import Login from "./components/auth/Login";
 // import PrivateRoute from "./components/private-route/PrivateRoute";
 // import Dashboard from "./components/dashboard/Dashboard";
 
@@ -40,17 +40,17 @@ class App extends Component {
     return (
       // <Provider store={store}>
       <Router>
-      <div className="App">
-        <Navbar />
-        <Landing/>
-        {/* <Route exact path="/" component={Landing} /> */}
-          {/* <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} /> */}
+        <div className="App">
+          <Navbar />
+          {/* <Landing/> */}
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/register" component={Register} />
+          <Route exact path="/login" component={Login} />
           {/* <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
           </Switch> */}
-      </div>
-    </Router>
+        </div>
+      </Router>
       // </Provider>
     );
   }
@@ -68,8 +68,8 @@ class App extends Component {
 //   return (
 //   <div>
 //     <ReactMapGL
-//       {...viewport} 
-      
+//       {...viewport}
+
 //       >
 //     </ReactMapGL>
 //   </div>

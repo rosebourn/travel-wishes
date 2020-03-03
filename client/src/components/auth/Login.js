@@ -49,7 +49,7 @@ console.log(userData);
   };
 
 render() {
-    const { errors } = this.state;
+    const errors = this.state.errors;
 
 return (
       <div className="container">
