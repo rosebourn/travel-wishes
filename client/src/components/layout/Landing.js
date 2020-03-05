@@ -9,14 +9,9 @@ class Landing extends Component {
           <div className="col s12 center-align">
             <h4>
               Explore the world!
-              {/* <Build a login/auth app with the{" "}
-              <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
-              scratch */}
             </h4>
             <p className="flow-text grey-text text-darken-1">
               Find cities you would like to visit and save them to a "someday" travel list.
-              {/* Create a (minimal) full-stack app with user authentication via
-              passport and JWTs */}
             </p>
             <br />
             <div className="col s6">
@@ -27,7 +22,7 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                className="btn btn-large waves-effect waves-light hoverable cyan darken-2"
               >
                 Register
               </Link>
@@ -40,7 +35,7 @@ class Landing extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px"
                 }}
-                className="btn btn-large btn-flat waves-effect white black-text"
+                className="btn btn-large waves-effect waves-teal hoverable white black-text"
               >
                 Log In
               </Link>

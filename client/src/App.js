@@ -13,6 +13,7 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
+import Map from "./components/layout/Map";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -42,10 +43,10 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar />
-          {/* <Landing/> */}
           <Route exact path="/" component={Landing} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
+          <Route exact path="/map" component={Map} />
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
           </Switch>
@@ -55,25 +56,5 @@ class App extends Component {
     );
   }
 }
-
-// function App() {
-//   const [viewport, setViewport] = useState({
-//     width: "100vw",
-//     height: "100vh",
-//     latitude: 45.4211,
-//     longitude: -75.6903,
-//     zoom: 8
-//   });
-
-//   return (
-//   <div>
-//     <ReactMapGL
-//       {...viewport}
-
-//       >
-//     </ReactMapGL>
-//   </div>
-//   );
-// }
 
 export default App;

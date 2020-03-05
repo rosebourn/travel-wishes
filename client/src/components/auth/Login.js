@@ -65,7 +65,7 @@ return (
                 <b>Login</b> below
               </h4>
               <p className="grey-text text-darken-1">
-                Don't have an account? <Link to="/register">Register</Link>
+                Don't have an account? <Link to="/register" className="cyan-text">Register</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -112,7 +112,7 @@ return (
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large waves-effect waves-light hoverable cyan darken-2"
                 >
                   Login
                 </button>
@@ -140,5 +140,3 @@ export default connect(
   mapStateToProps,
   { loginUser }
 )(Login);
-
-// export default Login;

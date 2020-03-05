@@ -135,7 +135,7 @@ class Register extends Component {
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-large waves-effect waves-light hoverable cyan darken-2"
                 >
                   Sign up
                 </button>
@@ -160,5 +160,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps, { registerUser })(withRouter(Register));
-
-// export default Register;
