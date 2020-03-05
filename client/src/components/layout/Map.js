@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import { Link } from "react-router-dom";
 import ReactMapGL from "react-map-gl";
 import 'mapbox-gl/dist/mapbox-gl.css';
-// import { connect } from "mongoose";
+import { connect } from "mongoose";
 
 const Map = () => {
   const [viewport, setViewport] = useState({
