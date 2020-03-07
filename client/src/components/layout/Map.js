@@ -3,8 +3,8 @@ import ReactMapGL from "react-map-gl";
 
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-// const TOKEN = "pk.eyJ1Ijoicm9zZWJvdXJuIiwiYSI6ImNrNm8wa2F0dzE2a3kzbm5xNWQ1NGpvMTUifQ.zZfvNREvPJxDYp3RLujCDg"
 const TOKEN = process.env.REACT_APP_MAPBOX_KEY
+
 const Map = () => {
   const [viewport, setViewport] = useState({
           width: "100vw",
