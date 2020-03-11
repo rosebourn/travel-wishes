@@ -1,0 +1,34 @@
+{
+  "cityData": [
+  {
+    "type": "FeatureCollection",
+    "features": [{
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.032, 38.913]
+      },
+      "properties": {
+        "city_id": 1,
+        "title": "Mapbox",
+        "description": "Washington, D.C."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.414, 37.776]
+      },
+      "properties": {
+        "city_id": 2,
+        "title": "Mapbox",
+        "description": "San Francisco, California"
+      }
+    }]
+  }
+]
+}
+
+export default cityData;
+

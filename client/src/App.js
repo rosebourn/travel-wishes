@@ -5,8 +5,6 @@ import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
-// import ReactMapGL from "react-map-gl";
-// import 'mapbox-gl/dist/mapbox-gl.css';
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
@@ -49,9 +47,9 @@ class App extends Component {
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/map" component={Map} />
-          <Switch>
+          {/* <Switch> */}
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
-          </Switch>
+          {/* </Switch> */}
         </div>
       </Router>
      </Provider>
