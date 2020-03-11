@@ -1,10 +1,13 @@
-import React, { useState } from "react";
-import ReactMapGL, { Marker } from "react-map-gl";
-// import * as cityData from "../../data/city-info.json";
+import React, { useState, useEffect } from "react";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
+import cityData from "../../data/city-info.json";
 import 'mapbox-gl/dist/mapbox-gl.css';
+
+// const cityData = require("../../data/city-info.json")
 
 const TOKEN = process.env.REACT_APP_MAPBOX_KEY;
 
+console.log(cityData)
 const geojson = {
     type: 'FeatureCollection',
     features: [{
@@ -137,6 +140,16 @@ const Map = () => {
           longitude: -39.462891,
           zoom: 2
       });
+      const [selectedCity, setSelectedCity] = useState(null);
+
+      useEffect(() => {
+          const listener = e => {
+              if (e.key === "Escape") {
+                  setSelectedCity(null);
+              }
+          };
+          window.addEventListener("keydown", listener);
+      }, []);
 
       return (
           <div>
@@ -149,11 +162,38 @@ const Map = () => {
               }}
               >
                   {geojson.features.map((city) => (
-                    <Marker key={city.properties.city_id} latitude={city.geometry.coordinates[1]} longitude={city.geometry.coordinates[0]}>
-                      <div>CITY</div>
+                    <Marker key={city.properties.city_id}
+                     latitude={city.geometry.coordinates[1]} 
+                     longitude={city.geometry.coordinates[0]}>
+                      <button onClick={(e) => {
+                          e.preventDefault();
+                          setSelectedCity(city);
+                      }}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        cursor: "pointer"
+                      }}>
+                          <img src="/pin.svg" alt="pin" 
+                          style={{
+                              width: "20px",
+                              height: "20px"
+                          }}/>
+                      </button>
                     </Marker >
                   ))}
-                  
+                  {selectedCity ? (
+                      <Popup 
+                        latitude={selectedCity.geometry.coordinates[1]}
+                        longitude={selectedCity.geometry.coordinates[0]}
+                        onClose={() => {
+                            setSelectedCity(null);
+                        }}>
+                          <div>
+                            <h2>{selectedCity.properties.description}</h2>
+                          </div>
+                      </Popup>
+                  ) : null}
               </ReactMapGL>
           </div>
       )
