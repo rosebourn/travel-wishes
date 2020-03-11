@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-// import * as cityData from "../../data/city-info.json";
+import cityData from "../../data/city-info.json";
 import 'mapbox-gl/dist/mapbox-gl.css';
+
+// const cityData = require("../../data/city-info.json")
 
 const TOKEN = process.env.REACT_APP_MAPBOX_KEY;
 
+console.log(cityData)
 const geojson = {
     type: 'FeatureCollection',
     features: [{
