@@ -54,7 +54,24 @@ class Register extends Component {
     const errors = this.state.errors;
 
     return (
-      <div className="container">
+     <div className="container">
+        <Link
+              to="/"
+              style={{
+                fontFamily: "monospace",
+                fontSize: "50px"
+              }}
+              className="col s5 brand-logo center black-text"
+            >
+              <i className="material-icons"
+              style={{
+                fontSize: "35px",
+                paddingRight: "10px"
+              }}
+              >flight</i>
+              Travel Wishes
+            </Link>
+             <div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
             <Link to="/" className="btn-flat waves-effect">
@@ -143,6 +160,7 @@ class Register extends Component {
             </form>
           </div>
         </div>
+      </div>
       </div>
     );
   }

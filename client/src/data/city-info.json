@@ -1,6 +1,6 @@
 {
-  "cityData": [
-  {
+  "cityData": {
+  [
     "type": "FeatureCollection",
     "features": [{
       "type": "Feature",
@@ -25,7 +25,201 @@
         "title": "Mapbox",
         "description": "San Francisco, California"
       }
-    }]
-  }
-]
+    },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-68.15, -16.5]
+        },
+        "properties": {
+          "city_id": 4,
+          "title": "Mapbox",
+          "description": "La Paz, Bolivia"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [145.766251, -16.92304]
+        },
+        "properties": {
+          "city_id": 5,
+          "title": "Mapbox",
+          "description": "Cairns, Australia"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-79.416667, 43.666667]
+        },
+        "properties": {
+          "city_id": 6,
+          "title": "Mapbox",
+          "description": "Toranto, Canada"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [47.533333, -18.933333]
+        },
+        "properties": {
+          "city_id": 7,
+          "title": "Mapbox",
+          "description": "Ampamantanana, Madagascar"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [23.733333, 37.983333]
+        },
+        "properties": {
+          "city_id": 8,
+          "title": "Mapbox",
+          "description": "Athens, Greece"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [35.509722, 33.871944]
+        },
+        "properties": {
+          "city_id": 9,
+          "title": "Mapbox",
+          "description": "Beirut, Lebanon"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [72.836447, 18.987807]
+        },
+        "properties": {
+          "city_id": 10,
+          "title": "Mapbox",
+          "description": "Mumbai, India"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [37.615556, 55.752222]
+        },
+        "properties": {
+          "city_id": 11,
+          "title": "Mapbox",
+          "description": "Moscow, Russia"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-82.364167, 23.131944]
+        },
+        "properties": {
+          "city_id": 12,
+          "title": "Mapbox",
+          "description": "Havana, Cuba"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [135.75, 35.016667]
+        },
+        "properties": {
+          "city_id": 13,
+          "title": "Mapbox",
+          "description": "Kyoto, Japan"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-88.631529, 20.869456]
+        },
+        "properties": {
+          "city_id": 14,
+          "title": "Mapbox",
+          "description": "Quintana Roo, Mexico"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-3.707721, 40.412752]
+        },
+        "properties": {
+          "city_id": 15,
+          "title": "Mapbox",
+          "description": "Madrid, Spain"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [105.854152, 21.028167]
+        },
+        "properties": {
+          "city_id": 16,
+          "title": "Mapbox",
+          "description": "Hanoi, Vietnam"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [2.333333, 48.866667]
+        },
+        "properties": {
+          "city_id": 17,
+          "title": "Mapbox",
+          "description": "Paris, France"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-114.93669, 44.2150157]
+        },
+        "properties": {
+          "city_id": 18,
+          "title": "Mapbox",
+          "description": "Stanley, Idaho"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-120.1861956, 48.4779232]
+        },
+        "properties": {
+          "city_id": 19,
+          "title": "Mapbox",
+          "description": "Winthrop, Washington"
+        }
+        }
+      ]
+      }
+  ]
 }
+  
