@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-import cityData from "../../data/city-info.json";
+// import cityData from "../../data/city-info.json";
+import Navbar from "./Navbar";
+// import * as image from "../../assets/images";
 import 'mapbox-gl/dist/mapbox-gl.css';
+// import "../../assets/images";
 
-// const cityData = require("../../data/city-info.json")
+// console.log(cityData);
 
 const TOKEN = process.env.REACT_APP_MAPBOX_KEY;
 
-console.log(cityData)
 const geojson = {
     type: 'FeatureCollection',
     features: [{
@@ -19,7 +21,8 @@ const geojson = {
       properties: {
         city_id: 1,
         title: 'Mapbox',
-        description: 'Washington, D.C.'
+        description: 'Washington, D.C.',
+        image: "../../assets/images/1.jpg"
       }
     },
     {
@@ -31,7 +34,8 @@ const geojson = {
       properties: {
         city_id: 2,
         title: 'Mapbox',
-        description: 'San Francisco, California'
+        description: 'San Francisco, California',
+        image: "../../assets/images/1.jpg"
       }
     },
     {
@@ -43,7 +47,8 @@ const geojson = {
         properties: {
           city_id: 3,
           title: 'Mapbox',
-          description: 'La Paz, Bolivia'
+          description: 'La Paz, Bolivia',
+          image: "../../assets/images/1.jpg"
         }
       },
       {
@@ -55,7 +60,8 @@ const geojson = {
         properties: {
           city_id: 4,
           title: 'Mapbox',
-          description: 'Cairns, Australia'
+          description: 'Cairns, Australia',
+          image: "../../assets/images/1.jpg"
         }
       },
       {
@@ -67,7 +73,8 @@ const geojson = {
         properties: {
           city_id: 5,
           title: 'Mapbox',
-          description: 'Toranto, Canada'
+          description: 'Toranto, Canada',
+          image: "../../assets/images/1.jpg"
         }
       },
       {
@@ -79,7 +86,8 @@ const geojson = {
         properties: {
           city_id: 6,
           title: 'Mapbox',
-          description: 'Ampamantanana, Madagascar'
+          description: 'Ampamantanana, Madagascar',
+          image: "../../assets/images/1.jpg"
         }
       },
       {
@@ -91,7 +99,8 @@ const geojson = {
         properties: {
           city_id: 7,
           title: 'Mapbox',
-          description: 'Athens, Greece'
+          description: 'Athens, Greece',
+          image: "../../assets/images/1.jpg"
         }
       },
       {
@@ -103,7 +112,8 @@ const geojson = {
         properties: {
           city_id: 8,
           title: 'Mapbox',
-          description: 'Beirut, Lebanon'
+          description: 'Beirut, Lebanon',
+          image: "../../assets/images/1.jpg"
         }
       },
       {
@@ -115,7 +125,8 @@ const geojson = {
         properties: {
           city_id: 9,
           title: 'Mapbox',
-          description: 'Mumbai, India'
+          description: 'Mumbai, India',
+          image: "../../assets/images/1.jpg"
         }
       },
       {
@@ -127,17 +138,19 @@ const geojson = {
         properties: {
           city_id: 10,
           title: 'Mapbox',
-          description: 'Moscow, Russia'
+          description: 'Moscow, Russia',
+          image: "../../assets/images/1.jpg"
         }
-      }]
+      }
+    ]
   };
 
 const Map = () => {
   const [viewport, setViewport] = useState({
           width: "100vw",
           height: "100vh",
-          latitude: 35.746512,
-          longitude: -39.462891,
+          latitude: 32.4279,
+          longitude: 53.6880,
           zoom: 2
       });
       const [selectedCity, setSelectedCity] = useState(null);
@@ -153,6 +166,7 @@ const Map = () => {
 
       return (
           <div>
+              <Navbar />
               <ReactMapGL 
               {...viewport}
               mapboxApiAccessToken={TOKEN}
@@ -174,7 +188,7 @@ const Map = () => {
                         border: "none",
                         cursor: "pointer"
                       }}>
-                          <img src="/pin.svg" alt="pin" 
+                          <img src="/pin-navy.svg" alt="pin" 
                           style={{
                               width: "20px",
                               height: "20px"
@@ -190,7 +204,13 @@ const Map = () => {
                             setSelectedCity(null);
                         }}>
                           <div>
-                            <h2>{selectedCity.properties.description}</h2>
+                            <p>{selectedCity.properties.description}</p>
+                            <img src={selectedCity.properties.image} alt="city"
+                            style={{
+                                width: "30px",
+                                height: "30px"
+                            }}
+                            ></img>
                           </div>
                       </Popup>
                   ) : null}
