@@ -18,27 +18,33 @@ class Dashboard extends Component {
           style={{
             fontFamily: "monospace",
             fontSize: "50px",
-            paddingLeft: "325px"
+            paddingLeft: "275px"
           }}
           className="col s5 brand-logo center black-text"
         >
-          <i className="material-icons"
-          style={{
-            fontSize: "35px",
-            paddingRight: "10px"
-          }}>flight</i>
+          <i
+            className="material-icons"
+            style={{
+              fontSize: "35px",
+              paddingRight: "10px"
+            }}
+          >
+            flight
+          </i>
           Travel Wishes
         </Link>
-        <div style={{ 
-          height: "75vh" 
-          }} 
-          className="container valign-wrapper">
+        <div
+          style={{
+            height: "75vh"
+          }}
+          className="container valign-wrapper"
+        >
           <div className="row">
             <div className="col s12 center-align">
               <h4>
                 <p className="flow-text grey-text text-darken-1">
-               Thank you for visiting our site. Happy Travels!
-              </p>
+                  Thank you for visiting our site. Happy Travels!
+                </p>
               </h4>
               <button
                 style={{

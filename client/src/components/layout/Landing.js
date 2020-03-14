@@ -29,29 +29,35 @@ class Landing extends Component {
               }}
               className="col s5 brand-logo center black-text"
             >
-              <i className="material-icons"
-               style={{
-                fontSize: "35px"
-              }}>flight</i>
+              <i
+                className="material-icons"
+                style={{
+                  fontSize: "35px"
+                }}
+              >
+                flight
+              </i>
               Travel Wishes
             </Link>
             <div
-              style={{ 
-                height: "75vh" 
+              style={{
+                height: "75vh"
               }}
               className="container valign-wrapper"
             >
               <div className="row">
                 <div className="col s12 center-align">
                   <h4
-                  style={{
-                    marginTop: "100px",
-                    color: "black"
-                  }}
-                  >Explore the world!</h4>
+                    style={{
+                      marginTop: "100px",
+                      color: "black"
+                    }}
+                  >
+                    Explore the world!
+                  </h4>
                   <p className="flow-text grey-text text-darken-1">
-                    Find places you'd like to visit and save them to a
-                    "someday" travel list.
+                    Find places you'd like to visit and save them to a "someday"
+                    travel list.
                   </p>
                   <br />
                   <div className="col s6">
@@ -79,7 +85,6 @@ class Landing extends Component {
                     >
                       Log In
                     </Link>
-
                   </div>
                 </div>
               </div>
