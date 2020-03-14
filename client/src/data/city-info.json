@@ -1,6 +1,6 @@
 {
-  "cityData": {
-  [
+  "cityData": [
+  {
     "type": "FeatureCollection",
     "features": [{
       "type": "Feature",

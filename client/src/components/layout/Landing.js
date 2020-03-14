@@ -1,11 +1,23 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import Background from "../../assets/background.png";
+// import Background from "../../background/background.png";
+
+// const styles = {
+//   background: {
+//   width: "100%",
+//   height: "100%",
+//   backgroundImage: `url(${"static.public.assets.background.background.png"})`
+// }
+// };
 
 class Landing extends Component {
   render() {
     return (
-      // <div className="navbar-fixed">
+      // <div className="background"
+      // style={{
+      //   backgroundImage: `url(${Background})`
+      // }}>
+      <div className="container">
         <nav className="z-depth-0">
           <div className="nav-wrapper white">
             <Link
@@ -38,7 +50,7 @@ class Landing extends Component {
                   }}
                   >Explore the world!</h4>
                   <p className="flow-text grey-text text-darken-1">
-                    Find cities you would like to visit and save them to a
+                    Find places you'd like to visit and save them to a
                     "someday" travel list.
                   </p>
                   <br />
@@ -67,14 +79,14 @@ class Landing extends Component {
                     >
                       Log In
                     </Link>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        
-      </nav>
-      
+        </nav>
+      </div>
     );
   }
 }

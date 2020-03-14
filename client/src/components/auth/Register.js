@@ -19,7 +19,6 @@ class Register extends Component {
   }
 
   componentDidMount() {
-    // If logged in and user navigates to Register page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
@@ -46,7 +45,6 @@ class Register extends Component {
       password: this.state.password,
       password2: this.state.password2
     };
-    console.log(newUser);
     this.props.registerUser(newUser, this.props.history);
   };
 
@@ -59,7 +57,8 @@ class Register extends Component {
               to="/"
               style={{
                 fontFamily: "monospace",
-                fontSize: "50px"
+                fontSize: "50px", 
+                paddingLeft: "300px",
               }}
               className="col s5 brand-logo center black-text"
             >
@@ -74,7 +73,11 @@ class Register extends Component {
              <div className="container">
         <div className="row">
           <div className="col s8 offset-s2">
-            <Link to="/" className="btn-flat waves-effect">
+            <Link to="/" className="btn-flat waves-effect"
+            style={{
+              paddingTop: "13px"
+            }}
+            >
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>

@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
-// import cityData from "../../data/city-info.json";
+// import cityData from "../../../public/data/city-info.json";
 import Navbar from "./Navbar";
-// import * as image from "../../assets/images";
 import 'mapbox-gl/dist/mapbox-gl.css';
-// import "../../assets/images";
 
 // console.log(cityData);
 
@@ -16,26 +14,26 @@ const geojson = {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-77.032, 38.913]
+        coordinates: [55.4920, 4.6796]
       },
       properties: {
         city_id: 1,
         title: 'Mapbox',
-        description: 'Washington, D.C.',
-        image: "../../assets/images/1.jpg"
+        description: 'Seychelles, East Africa',
+        image: "../../assets/images/1.jpg",
       }
     },
     {
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [-122.414, 37.776]
+        coordinates: [-122.335167, 47.608013]
       },
       properties: {
         city_id: 2,
         title: 'Mapbox',
-        description: 'San Francisco, California',
-        image: "../../assets/images/1.jpg"
+        description: 'Seattle, Washington',
+        image: "../../assets/images/2.jpg"
       }
     },
     {
@@ -48,7 +46,7 @@ const geojson = {
           city_id: 3,
           title: 'Mapbox',
           description: 'La Paz, Bolivia',
-          image: "../../assets/images/1.jpg"
+          image: "../../assets/images/3.jpg"
         }
       },
       {
@@ -61,7 +59,46 @@ const geojson = {
           city_id: 4,
           title: 'Mapbox',
           description: 'Cairns, Australia',
-          image: "../../assets/images/1.jpg"
+          image: "../../assets/images/4.jpg"
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-73.000000, -51.000000]
+        },
+        properties: {
+          city_id: 5,
+          title: 'Mapbox',
+          description: 'Patagonia, Chile',
+          image: "../../assets/images/5.jpg"
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [135.75, 35.016667]
+        },
+        properties: {
+          city_id: 6,
+          title: 'Mapbox',
+          description: 'Kyoto, Japan',
+          image: "../../assets/images/6.jpg"
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [-88.631529, 20.869456]
+        },
+        properties: {
+          city_id: 7,
+          title: 'Mapbox',
+          description: 'Quintana Roo, Mexico',
+          image: "../../assets/images/7.jpg"
         }
       },
       {
@@ -71,75 +108,36 @@ const geojson = {
           coordinates: [-79.416667, 43.666667]
         },
         properties: {
-          city_id: 5,
-          title: 'Mapbox',
-          description: 'Toranto, Canada',
-          image: "../../assets/images/1.jpg"
-        }
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [47.533333, -18.933333]
-        },
-        properties: {
-          city_id: 6,
-          title: 'Mapbox',
-          description: 'Ampamantanana, Madagascar',
-          image: "../../assets/images/1.jpg"
-        }
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [23.733333, 37.983333]
-        },
-        properties: {
-          city_id: 7,
-          title: 'Mapbox',
-          description: 'Athens, Greece',
-          image: "../../assets/images/1.jpg"
-        }
-      },
-      {
-        type: 'Feature',
-        geometry: {
-          type: 'Point',
-          coordinates: [35.509722, 33.871944]
-        },
-        properties: {
           city_id: 8,
           title: 'Mapbox',
-          description: 'Beirut, Lebanon',
-          image: "../../assets/images/1.jpg"
+          description: 'Toranto, Canada',
+          image: "../../assets/images/8.jpg"
         }
       },
       {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [72.836447, 18.987807]
+          coordinates: [2.333333, 48.866667]
         },
         properties: {
           city_id: 9,
           title: 'Mapbox',
-          description: 'Mumbai, India',
-          image: "../../assets/images/1.jpg"
+          description: 'Paris, France',
+          image: "../../assets/images/9.jpg"
         }
       },
       {
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [37.615556, 55.752222]
+          coordinates: [109.1967, 12.2388]
         },
         properties: {
           city_id: 10,
           title: 'Mapbox',
-          description: 'Moscow, Russia',
-          image: "../../assets/images/1.jpg"
+          description: 'Nha Trang, Vietnam',
+          image: "../../assets/images/10.jpg"
         }
       }
     ]
@@ -202,13 +200,14 @@ const Map = () => {
                         longitude={selectedCity.geometry.coordinates[0]}
                         onClose={() => {
                             setSelectedCity(null);
-                        }}>
+                        }}
+                        >
                           <div>
-                            <p>{selectedCity.properties.description}</p>
+                            <h5>{selectedCity.properties.description}</h5>
                             <img src={selectedCity.properties.image} alt="city"
                             style={{
-                                width: "30px",
-                                height: "30px"
+                                width: "300px",
+                                height: "200px"
                             }}
                             ></img>
                           </div>

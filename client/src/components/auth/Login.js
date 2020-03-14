@@ -60,7 +60,7 @@ class Login extends Component {
                 fontFamily: "monospace",
                 fontSize: "50px",
                 marginTop: "20px",
-                textAlign: "center"
+                paddingLeft: "275px"
               }}
               className="col s5 brand-logo center black-text valign-center"
             >
